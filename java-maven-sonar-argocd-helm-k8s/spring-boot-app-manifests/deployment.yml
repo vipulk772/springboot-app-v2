@@ -4,9 +4,9 @@ metadata:
   name: spring-boot-app
   labels:
     app: spring-boot-app
-    tags.datadoghq.com/env: dev
-    tags.datadoghq.com/service: spring-boot-app
-    tags.datadoghq.com/version: v1.28.0    
+#    tags.datadoghq.com/env: dev
+#    tags.datadoghq.com/service: spring-boot-app
+#    tags.datadoghq.com/version: v1.28.0    
 spec:
   replicas: 2
   selector:
@@ -16,18 +16,18 @@ spec:
     metadata:
       labels:
         app: spring-boot-app
-        tags.datadoghq.com/env: dev
-        tags.datadoghq.com/service: spring-boot-app
-        tags.datadoghq.com/version: v1.28.0
-        admission.datadoghq.com/enabled: "true"
-      annotations:
-        admission.datadoghq.com/java-lib.version: v1.28.0        
+  #      tags.datadoghq.com/env: dev
+  #      tags.datadoghq.com/service: spring-boot-app
+  #      tags.datadoghq.com/version: v1.28.0
+  #      admission.datadoghq.com/enabled: "true"
+  #    annotations:
+   #     admission.datadoghq.com/java-lib.version: v1.28.0        
     spec:
       containers:
       - name: spring-boot-app
         image: vipulk772/cicd:1
-        env:
-          - name: DD_LOGS_INJECTION
-            value: "true"
+  #      env:
+ #         - name: DD_LOGS_INJECTION
+  #          value: "true"
         ports:
         - containerPort: 8080
