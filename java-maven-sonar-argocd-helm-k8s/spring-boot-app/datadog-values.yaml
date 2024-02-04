@@ -1,0 +1,22 @@
+datadog:
+#  apiKeyExistingSecret: datadog-secret
+  site: datadoghq.com
+  apiKey: startd941490d91aad6940c8ce351a9e4d9b9end
+  appkey: start68c66e69d43ddd7944783e8984524e8a87295517end
+  tags:
+    - app:springboot
+    - env:dev
+  apm:
+    instrumentation:
+      enabled: true  
+  processAgent:
+    enabled: true
+    processCollection: true
+  logs:
+    enabled: true
+    containerCollectAll: true
+  kubelet:
+    tlsVerify: false
+providers:
+  aks:
+    enabled: true
